@@ -528,6 +528,21 @@ public class Frame  {
 					     		  }
 					     		}
 						}
+						
+		                try (Stream<Path> walk = Files.walk(Paths.get(s+"\\EXAM_TKS\\QC_Seal"))) {
+			                myWriterRep.write("Folder : EXAM_TKS : QC_Seal \n");
+			                	List<String> result = walk.map(x -> x.toString())
+			                			.filter(f -> f.endsWith(".pdf")).collect(Collectors.toList());
+			                	int rep = 0;
+			                	while(rep < result.size()) {
+			                		myWriterRep.write(result.get(rep)+" \n");
+			                	rep++;
+			                	}
+			                	myWriterRep.write("Size >>>"+result.size()+" \n");
+			                	SummaryReport += result.size();
+			                } catch (IOException e) {
+			                	e.printStackTrace();
+			                }
 					     		
 		     	  }else if (QCSDXP.isSelected()){
 		     		 Files.move(new File(s+"\\QC_Seal").toPath(), new File(s+"\\EXAM_DXP\\QC_Seal").toPath(), StandardCopyOption.REPLACE_EXISTING);
@@ -548,6 +563,21 @@ public class Frame  {
 					     		  }
 					     		}
 						}
+						
+		                try (Stream<Path> walk = Files.walk(Paths.get(s+"\\EXAM_DXP\\QC_Seal"))) {
+			                myWriterRep.write("Folder : EXAM_DXP : QC_Seal \n");
+			                	List<String> result = walk.map(x -> x.toString())
+			                			.filter(f -> f.endsWith(".pdf")).collect(Collectors.toList());
+			                	int rep = 0;
+			                	while(rep < result.size()) {
+			                		myWriterRep.write(result.get(rep)+" \n");
+			                	rep++;
+			                	}
+			                	myWriterRep.write("Size >>>"+result.size()+" \n");
+			                	SummaryReport += result.size();
+			                } catch (IOException e) {
+			                	e.printStackTrace();
+			                }
 		     	  }
 		     	  
 		     	  if(QCWTKS.isSelected()) {
@@ -569,6 +599,21 @@ public class Frame  {
 					     		  }
 					     		}
 						}
+						
+		                try (Stream<Path> walk = Files.walk(Paths.get(s+"\\EXAM_TKS\\QC_Wrap"))) {
+			                myWriterRep.write("Folder : EXAM_TKS : QC_Wrap \n");
+			                	List<String> result = walk.map(x -> x.toString())
+			                			.filter(f -> f.endsWith(".pdf")).collect(Collectors.toList());
+			                	int rep = 0;
+			                	while(rep < result.size()) {
+			                		myWriterRep.write(result.get(rep)+" \n");
+			                	rep++;
+			                	}
+			                	myWriterRep.write("Size >>>"+result.size()+" \n");
+			                	SummaryReport += result.size();
+			                } catch (IOException e) {
+			                	e.printStackTrace();
+			                }
 						
 						
 		     	  }else if (QCWDXP.isSelected()){
@@ -592,6 +637,21 @@ public class Frame  {
 					     		  }
 					     		}
 						}
+						
+		                try (Stream<Path> walk = Files.walk(Paths.get(s+"\\EXAM_DXP\\QC_Wrap"))) {
+			                myWriterRep.write("Folder : EXAM_DXP : QC_Wrap \n");
+			                	List<String> result = walk.map(x -> x.toString())
+			                			.filter(f -> f.endsWith(".pdf")).collect(Collectors.toList());
+			                	int rep = 0;
+			                	while(rep < result.size()) {
+			                		myWriterRep.write(result.get(rep)+" \n");
+			                	rep++;
+			                	}
+			                	myWriterRep.write("Size >>>"+result.size()+" \n");
+			                	SummaryReport += result.size();
+			                } catch (IOException e) {
+			                	e.printStackTrace();
+			                }
 		     	  }
 		     	  
 		     	  if(QCETKS.isSelected()) {
@@ -615,6 +675,21 @@ public class Frame  {
 					     		}
 						}
 						
+		                try (Stream<Path> walk = Files.walk(Paths.get(s+"\\EXAM_TKS\\QC_Env"))) {
+			                myWriterRep.write("Folder : EXAM_TKS : QC_Env \n");
+			                	List<String> result = walk.map(x -> x.toString())
+			                			.filter(f -> f.endsWith(".pdf")).collect(Collectors.toList());
+			                	int rep = 0;
+			                	while(rep < result.size()) {
+			                		myWriterRep.write(result.get(rep)+" \n");
+			                	rep++;
+			                	}
+			                	myWriterRep.write("Size >>>"+result.size()+" \n");
+			                	SummaryReport += result.size();
+			                } catch (IOException e) {
+			                	e.printStackTrace();
+			                }
+						
 		     	  }else if (QCEDXP.isSelected()){
 		     		 Files.move(new File(s+"\\QC_Env").toPath(), new File(s+"\\EXAM_DXP\\QC_Env").toPath(), StandardCopyOption.REPLACE_EXISTING);
 		     		
@@ -635,6 +710,21 @@ public class Frame  {
 					     		  }
 					     		}
 						}
+						
+		                try (Stream<Path> walk = Files.walk(Paths.get(s+"\\EXAM_DXP\\QC_Env"))) {
+			                myWriterRep.write("Folder : EXAM_DXP : QC_Env \n");
+			                	List<String> result = walk.map(x -> x.toString())
+			                			.filter(f -> f.endsWith(".pdf")).collect(Collectors.toList());
+			                	int rep = 0;
+			                	while(rep < result.size()) {
+			                		myWriterRep.write(result.get(rep)+" \n");
+			                	rep++;
+			                	}
+			                	myWriterRep.write("Size >>>"+result.size()+" \n");
+			                	SummaryReport += result.size();
+			                } catch (IOException e) {
+			                	e.printStackTrace();
+			                }
 		     	  }
 		     	  	myWriterRep.write("Total File >>>"+SummaryReport+" \n");
 	                myWriterRep.close();//Close File Report

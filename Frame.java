@@ -236,7 +236,7 @@ public class Frame  {
 				                		myWriterRep.write(result.get(rep)+" \n");
 				                	rep++;
 				                	}
-				                	myWriterRep.write("Size >>>"+result.size()+" \n");
+				                	myWriterRep.write("Total >>>"+result.size()+" \n");
 				                	SummaryReport += result.size();
 				                } catch (IOException e) {
 				                	e.printStackTrace();
@@ -264,7 +264,7 @@ public class Frame  {
 			                		myWriterRep.write(result.get(rep)+" \n");
 			                	rep++;
 			                	}
-			                	myWriterRep.write("Size >>>"+result.size()+" \n");
+			                	myWriterRep.write("Total >>>"+result.size()+" \n");
 			                	SummaryReport += result.size();
 			                } catch (IOException e) {
 			                	e.printStackTrace();
@@ -294,7 +294,7 @@ public class Frame  {
 				                		myWriterRep.write(result.get(rep)+" \n");
 				                	rep++;
 				                	}
-				                	myWriterRep.write("Size >>>"+result.size()+" \n");
+				                	myWriterRep.write("Total >>>"+result.size()+" \n");
 				                	SummaryReport += result.size();
 				                } catch (IOException e) {
 				                	e.printStackTrace();
@@ -322,7 +322,7 @@ public class Frame  {
 			                		myWriterRep.write(result.get(rep)+" \n");
 			                	rep++;
 			                	}
-			                	myWriterRep.write("Size >>>"+result.size()+" \n");
+			                	myWriterRep.write("Total >>>"+result.size()+" \n");
 			                	SummaryReport += result.size();
 			                } catch (IOException e) {
 			                	e.printStackTrace();
@@ -352,7 +352,7 @@ public class Frame  {
 				                		myWriterRep.write(result.get(rep)+" \n");
 				                	rep++;
 				                	}
-				                	myWriterRep.write("Size >>>"+result.size()+" \n");
+				                	myWriterRep.write("Total >>>"+result.size()+" \n");
 				                	SummaryReport += result.size();
 				                } catch (IOException e) {
 				                	e.printStackTrace();
@@ -381,7 +381,7 @@ public class Frame  {
 			                		myWriterRep.write(result.get(rep)+" \n");
 			                	rep++;
 			                	}
-			                	myWriterRep.write("Size >>>"+result.size()+" \n");
+			                	myWriterRep.write("Total >>>"+result.size()+" \n");
 			                	SummaryReport += result.size();
 			                } catch (IOException e) {
 			                	e.printStackTrace();
@@ -411,7 +411,7 @@ public class Frame  {
 				                		myWriterRep.write(result.get(rep)+" \n");
 				                	rep++;
 				                	}
-				                	myWriterRep.write("Size >>>"+result.size()+" \n");
+				                	myWriterRep.write("Total >>>"+result.size()+" \n");
 				                	SummaryReport += result.size();
 				                } catch (IOException e) {
 				                	e.printStackTrace();
@@ -439,7 +439,7 @@ public class Frame  {
 			                		myWriterRep.write(result.get(rep)+" \n");
 			                	rep++;
 			                	}
-			                	myWriterRep.write("Size >>>"+result.size()+" \n");
+			                	myWriterRep.write("Total >>>"+result.size()+" \n");
 			                	SummaryReport += result.size();
 			                } catch (IOException e) {
 			                	e.printStackTrace();
@@ -469,7 +469,7 @@ public class Frame  {
 				                		myWriterRep.write(result.get(rep)+" \n");
 				                	rep++;
 				                	}
-				                	myWriterRep.write("Size >>>"+result.size()+" \n");
+				                	myWriterRep.write("Total >>>"+result.size()+" \n");
 				                	SummaryReport += result.size();
 				                } catch (IOException e) {
 				                	e.printStackTrace();
@@ -498,7 +498,7 @@ public class Frame  {
 			                		myWriterRep.write(result.get(rep)+" \n");
 			                	rep++;
 			                	}
-			                	myWriterRep.write("Size >>>"+result.size()+" \n");
+			                	myWriterRep.write("Total >>>"+result.size()+" \n");
 			                	SummaryReport += result.size();
 			                } catch (IOException e) {
 			                	e.printStackTrace();
@@ -538,7 +538,7 @@ public class Frame  {
 			                		myWriterRep.write(result.get(rep)+" \n");
 			                	rep++;
 			                	}
-			                	myWriterRep.write("Size >>>"+result.size()+" \n");
+			                	myWriterRep.write("Total >>>"+result.size()+" \n");
 			                	SummaryReport += result.size();
 			                } catch (IOException e) {
 			                	e.printStackTrace();
@@ -573,7 +573,7 @@ public class Frame  {
 			                		myWriterRep.write(result.get(rep)+" \n");
 			                	rep++;
 			                	}
-			                	myWriterRep.write("Size >>>"+result.size()+" \n");
+			                	myWriterRep.write("Total >>>"+result.size()+" \n");
 			                	SummaryReport += result.size();
 			                } catch (IOException e) {
 			                	e.printStackTrace();
@@ -609,7 +609,7 @@ public class Frame  {
 			                		myWriterRep.write(result.get(rep)+" \n");
 			                	rep++;
 			                	}
-			                	myWriterRep.write("Size >>>"+result.size()+" \n");
+			                	myWriterRep.write("Total >>>"+result.size()+" \n");
 			                	SummaryReport += result.size();
 			                } catch (IOException e) {
 			                	e.printStackTrace();
@@ -647,7 +647,7 @@ public class Frame  {
 			                		myWriterRep.write(result.get(rep)+" \n");
 			                	rep++;
 			                	}
-			                	myWriterRep.write("Size >>>"+result.size()+" \n");
+			                	myWriterRep.write("Total >>>"+result.size()+" \n");
 			                	SummaryReport += result.size();
 			                } catch (IOException e) {
 			                	e.printStackTrace();
@@ -684,7 +684,7 @@ public class Frame  {
 			                		myWriterRep.write(result.get(rep)+" \n");
 			                	rep++;
 			                	}
-			                	myWriterRep.write("Size >>>"+result.size()+" \n");
+			                	myWriterRep.write("Total >>>"+result.size()+" \n");
 			                	SummaryReport += result.size();
 			                } catch (IOException e) {
 			                	e.printStackTrace();
@@ -720,7 +720,7 @@ public class Frame  {
 			                		myWriterRep.write(result.get(rep)+" \n");
 			                	rep++;
 			                	}
-			                	myWriterRep.write("Size >>>"+result.size()+" \n");
+			                	myWriterRep.write("Total >>>"+result.size()+" \n");
 			                	SummaryReport += result.size();
 			                } catch (IOException e) {
 			                	e.printStackTrace();

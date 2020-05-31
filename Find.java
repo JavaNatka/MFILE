@@ -46,14 +46,14 @@ public class Find {
         String s = currentRelativePath.toAbsolutePath().toString();
         System.out.println("Current relative path is: " + s);
 
-        File fileName = new File(s);
-        File[] fileList = fileName.listFiles();
+        File fileNameReport = new File(s);
+        File[] fileListReport = fileNameReport.listFiles();
         File ReportFile = new File(s+"\\Summary_Report.txt");
         FileWriter myWriterRep = new FileWriter(s+"\\Summary_Report.txt", true);
         myWriterRep.write("Before Zip ==================== \n");
         ReportFile.createNewFile();
         int SummaryReport = 0;
-        for (File file: fileList) {
+        for (File file: fileListReport) {
             // System.out.println(file.getName()+" "+file.getName().indexOf("Sampling") );
             if(file.getName().indexOf("Sampling") >= 0) {
                 System.out.println(file.getName());
@@ -85,6 +85,22 @@ public class Find {
                 	e.printStackTrace();
                 }
                 //End Gen Report Before
+            }
+        }
+        
+        
+        
+        
+        
+        File fileName = new File(s);
+        File[] fileList = fileName.listFiles();
+        for (File file: fileList) {
+            // System.out.println(file.getName()+" "+file.getName().indexOf("Sampling") );
+            if(file.getName().indexOf("Sampling") >= 0) {
+                System.out.println(file.getName());
+                File folder = new File(s+"\\"+file.getName()+"\\");
+                File[] listOfFiles = folder.listFiles();
+              //Gen Report Before 
                 for (File file1 : listOfFiles) {
                     if (file1.isFile()) {
                         System.out.println(file1.getName());
@@ -281,23 +297,23 @@ public class Find {
             }
         }
         
-      //Find File Not Exist
+        //Find File Not Exist
         //-------------------------------------------------------
-        String csvFile = s+"\\account_sampling.txt";
-        String line = "";//Temp Row
-        String cvsSplitBy = "[|\n]";
+        String csvFileCount = s+"\\account_sampling.txt";
+        String lineCount = "";//Temp Row
+        String cvsSplitByCount = "[|\n]";
         int checkArr = 0;
-        String typeDoc = "";
-        String accountFalse; 
+        String typeDocCount = "";
+        String accountFalseCount; 
    	 File FileNotFound = new File(s+"\\FileNotFound.txt");
    	//String [] array = new String[30];
    	List<String> al = new CopyOnWriteArrayList<>();
         
-        try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(csvFileCount))) {
        	
        	 
-            while ((line = br.readLine()) != null) {
-                String[] account = line.split(cvsSplitBy);
+            while ((lineCount = br.readLine()) != null) {
+                String[] account = lineCount.split(cvsSplitByCount);
                 al.add(account[2])   ;
                 checkArr++;
             }
@@ -409,6 +425,67 @@ public class Find {
                    
             } 
             System.out.println(Arrays.asList(al)); 
+            i = 0;
+            System.out.println(Arrays.asList(al)); 
+            while (i < al.size()) 
+            {
+           	 File dir = new File(s+"\\QC_Seal\\");
+           	 System.out.println(" al.get(i)  = "+al.get(i) );
+           	FileFilter fileFilter = new WildcardFileFilter(al.get(i) + "*");
+                File[] files = dir.listFiles(fileFilter);
+             
+                System.out.println(" LINE = "+files.length);
+                if(files.length == 1) {
+               	 System.out.println(al.get(i)); 
+               	 al.remove(new String(al.get(i)));
+               	 i--;
+                }
+                i++;
+               //checkArr--;
+                   
+            } 
+            System.out.println(Arrays.asList(al)); 
+            i = 0;
+            System.out.println(Arrays.asList(al)); 
+            while (i < al.size()) 
+            {
+           	 File dir = new File(s+"\\QC_Wrap\\");
+           	 System.out.println(" al.get(i)  = "+al.get(i) );
+           	FileFilter fileFilter = new WildcardFileFilter(al.get(i) + "*");
+                File[] files = dir.listFiles(fileFilter);
+             
+                System.out.println(" LINE = "+files.length);
+                if(files.length == 1) {
+               	 System.out.println(al.get(i)); 
+               	 al.remove(new String(al.get(i)));
+               	 i--;
+                }
+                i++;
+               //checkArr--;
+                   
+            } 
+            System.out.println(Arrays.asList(al)); 
+            i = 0;
+            System.out.println(Arrays.asList(al)); 
+            while (i < al.size()) 
+            {
+           	 File dir = new File(s+"\\QC_Env\\");
+           	 System.out.println(" al.get(i)  = "+al.get(i) );
+           	FileFilter fileFilter = new WildcardFileFilter(al.get(i) + "*");
+                File[] files = dir.listFiles(fileFilter);
+             
+                System.out.println(" LINE = "+files.length);
+                if(files.length == 1) {
+               	 System.out.println(al.get(i)); 
+               	 al.remove(new String(al.get(i)));
+               	 i--;
+                }
+                i++;
+               //checkArr--;
+                   
+            } 
+            System.out.println(Arrays.asList(al)); 
+            
             if(al.size() > 0) {
             FileNotFound.createNewFile();
           FileWriter myWriter = new FileWriter(s+"\\FileNotFound.txt");
@@ -423,5 +500,7 @@ public class Find {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        
+
     }
 }
